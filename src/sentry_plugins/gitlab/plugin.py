@@ -201,6 +201,7 @@ class GitLabPlugin(CorePluginMixin, IssuePlugin2):
             self.raise_error(e)
         return config
 
+
 class GitLabMixin(CorePluginMixin):
     def message_from_error(self, exc):
         if isinstance(exc, ApiError):
@@ -355,4 +356,3 @@ class GitLabRepositoryProvider(GitLabMixin, providers.RepositoryProvider):
                 self.raise_error(e)
             else:
                 return self._format_commits(repo, res['commits'], res['diffs'])
-
