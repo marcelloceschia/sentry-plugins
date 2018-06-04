@@ -355,3 +355,4 @@ class GitLabRepositoryProvider(GitLabMixin, providers.RepositoryProvider):
                 self.raise_error(e)
             else:
                 return self._format_commits(repo, res['commits'], res['diffs'])
+
